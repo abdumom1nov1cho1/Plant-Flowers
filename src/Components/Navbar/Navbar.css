@@ -1,0 +1,14 @@
+@import '~mdb-ui-kit/css/mdb.min.css';
+.aaa{
+    font-weight: 800;
+}
+.aaaa{
+    background-color: grey;
+}
+.ddd{
+    color: black;
+}
+.btns{
+    display: flex;
+    gap: 20px;
+}
