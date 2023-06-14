@@ -1,107 +1,140 @@
 import React from "react";
-import "../Navbar/Navbar.css";
+import "../Navbar/Navbar.scss";
+
 
 const Navbar = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="aaa navbar-brand" href="#">
-            Plant{" "}
-            <img
-              src="https://www.freeiconspng.com/uploads/leaf-icon-png-9.png"
-              width={"20px"}
-              alt=""
-            />
-          </a>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        {/* <!-- Container wrapper --> */}
+        <div className="container">
+         <a href="" className="ffff">
+          Plant 
+         <img
+          data-aos='fade-right'
+            className="nav1__left__img1"
+            style={{ width: "25px" }}
+            src="https://www.pngkey.com/png/full/442-4420682_landscape-clipart-landscaping-maintenance-plant-icon.png"
+            alt=""
+          />
+         </a>
+          
+        
+          {/* <!-- Toggle button --> */}
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <i style={{color:'red'}} className="fas fa-bars"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
+
+          {/* <!-- Collapsible wrapper --> */}
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="asdf navbar-nav m-auto mb-2 mb-lg-0"data-aos='fade-up'>
+              <li className=" li_navbar nav-item">
+                <a className="li__a nav-link active" href="#">
+                  <a
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? "activeLink" : "dropbtn2"
+                    }
+                  >
+                    HOME
+                  </a>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Services
+              <li className="li__a nav-link active">
+                <a
+                  to="/dailyDeals"
+                  className={({ isActive }) =>
+                    isActive ? "activeLink" : "dropbtn2"
+                  }
+                >
+                  DAILY DEALS
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  About Us
+              <li className="li__a nav-link active">
+                <a
+                  to="/dailyDeals"
+                  className={({ isActive }) =>
+                    isActive ? "activeLink" : "dropbtn2"
+                  }
+                >
+                  DAILY DEALS
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Blog
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Contact
+
+              <li className="li__a nav-link active">
+                <a
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "activeLink" : "dropbtn2"
+                  }
+                >
+                  GIFT WITH TRAILFX
                 </a>
               </li>
             </ul>
-            <form class="btns d-flex">
-            <button class="btn btn-outline-success" type="submit">
-                Sign In
-              </button>
-              <button class="btn btn-outline-success" type="submit">
-                Sign Up
-              </button>
-              <ul class="navbar-nav">
-                {/* <!-- Notification dropdown --> */}
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle hidden-arrow"
-                    href="#"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-mdb-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img src="https://cdn-icons-png.flaticon.com/512/107/107822.png" width={"17px"} alt="" />
-                    <span class="badge rounded-pill badge-notification bg-danger">
-                      0
-                    </span>
-                  </a>
-                  <ul
-                    class="dropdown-menu dropdown-menu-end"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Some news
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Another news
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                {/* <!-- Notification dropdown --> */}
-              </ul>
-            </form>
+            {/* <!-- Left links --> */}
           </div>
+          {/* <!-- Collapsible wrapper --> */}
+
+          {/* <!-- Right elements --> */}
+          <div className="d-flex align-items-center"data-aos='fade-left'>
+            {/* <!-- Icon --> */}
+            <a to="/korzinka" className="text-reset me-3" href="#">
+              <i style={{width:"20px"}} className="fas fa-shopping-cart"></i>
+
+            </a>
+            {/* <!-- Avatar --> */}
+            {/* {localStorage.getItem("auth") ? ( */}
+              <div className="dropdown">
+                <a
+                  className="dropdown-toggle d-flex align-items-center hidden-arrow"
+                  href="#"
+                  id="navbarDropdownMenuAvatar"
+                  role="button"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="http://cdn.onlinewebfonts.com/svg/img_81837.png"
+                    className="rounded-circle"
+                    height="25"
+                    alt="Black and White Portrait of a Man"
+                    loading="lazy"
+                  />
+                </a>
+                <ul
+                  className="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                  <li>
+                    <a to="/my-profile" className="dropdown-item" href="#">
+                      My profile
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      to="/register"
+                      className ="dropdown-item"
+                      href="#"
+                      // onClick={Logout}
+                    >
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          {/* <!-- Right elements --> */}
         </div>
+        {/* <!-- Container wrapper --> */}
       </nav>
     </div>
   );
