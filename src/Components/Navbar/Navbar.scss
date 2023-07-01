@@ -45,7 +45,8 @@ body {
 .li__a {
   font-family: "Gloock", serif;
   font-family: "Play", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
+  font-size: 20px;
 }
 .dropbtn {
   font-family: "Gloock", serif;
@@ -128,4 +129,73 @@ body {
     background-color: #fff;
     
   }
+}
+.imgs{
+  margin-top: 30px;
+  width: 100%;
+  height: 600px;
+}
+.section{
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.right img{
+  width: 400px;
+  border: 5px solid rgb(211, 189, 24) ;
+}
+.p{
+  color: rgb(43, 43, 43);
+  font-weight: 600;
+}
+.ddd{
+  color: rgb(211, 189, 24);
+  margin-top: 90px;
+  font-weight: 800;
+}
+.section1{
+  display: flex;
+  justify-content: space-around;
+}
+.pp{
+  margin-top: 80px;
+  font-weight: 600;
+}
+.h111{
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-weight: 800;
+  color: rgb(211, 189, 24);
+}
+.img{
+  border: 5px solid rgb(211, 189, 24) ;
+}
+.imges{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.ims{
+  width: 400px;
+}
+.p3{
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 700;
+  color: red;
+}
+.imagess{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+}
+.ims1{
+  margin-top: 20px;
+  width: 400px;
+}
+.audio{
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  color: red;
 }
